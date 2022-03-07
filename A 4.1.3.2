@@ -1,0 +1,56 @@
+{Version A. 4.1.3.1}
+
+program kleinsteZahl2 (input, output);
+{gibt die kleinste Zahl der integer-Eingabezahlen}
+
+  var
+  Zahl,
+  Minimum: integer;
+  
+begin
+  writeln('Geben sie die interger-Zahlen ein.', '0 beendet die Eingabe.');
+  readln(Zahl);
+  Minimum := Zahl;
+  if Zahl <> 0 then
+    repeat 
+      if Zahl < Minimum then
+        Minimum := Zahl;
+      readln(Zahl)
+    until Zahl = 0;
+  if Minimun <> 0 then
+    writeln ('Die kleinste Zahl lautet:', Minimum, '.')
+  else
+    writeln('Es wurde keine Zahl <> 0 eingegeben.'
+end
+
+
+{Version A.4.1.3.2}
+
+program kleinsteZahl2 (input, output);
+{gibt die kleinste Zahl der integer-Eingabezahlen}
+
+  var
+  Zahl,
+  Minimum: integer;
+  
+begin
+  writeln('Geben sie die interger-Zahlen ein.', '0 beendet die Eingabe.');
+  readln(Zahl);
+  Minimum : integer;
+  
+  if Zahl = 0 then
+    writleln('Es wurde keine Zahl <> 0 eingegeben.')
+  else
+  begin
+    Minimum := Zahl
+    repeat 
+      if Zahl < Minimum then
+        Minimum := Zahl;
+      readln(Zahl)
+    until Zahl = 0;
+    writeln ('Die kleinste Zahl lautet:', Minimum, '.')
+    end
+end
+
+
+
