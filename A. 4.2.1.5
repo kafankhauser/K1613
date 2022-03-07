@@ -5,14 +5,63 @@ das die Art der Teilnahme (aktiv oder passiv) jedes Studenten einliest, die Matr
 und eine Liste der aktiven und passiven Studenten erstellt. Teilnahmestatus werden in char Format als 'a' und 'p' eingelesen.}
 
   const
-  MAXIMALTEILNEHMER = 12;
+  MAXTEILNEHMER = 12;
   
   type
+  tNatZahlPlus = 1..maxint;
+  tNatZahl = 0..maxint;
   tStatus = (aktiv, passiv);
-  tIndex = 1..12;
-  tTeilnahmeArt = array [tIndex] of tStatus;
+  tIndex = 1..MAXTEILNEHMER;
+  tMatrNrFeld = array [tIndex] of tNatZahlPlus;
+  tStatusFeld = array [tIndex] of tStatus;
   
   var
-  StudTeilnahme : tTeilnahmeArt
+  MatrNrFeld : tMatrNrFeld
+  StatusFeld : tStatusFeld
+  AnzStud : tNatZahl
   i : tIndex
+  Status : char;
+  
+begin
+  write('Wie viele Studenten nehmen teil?');
+  readln(AnzStud);
+  if AnzStud > MAXTEILNEHMER then
+    begin
+      writeln('Höchstens', MAXTEILNEHMER, 'Eingaben.');
+      AnzStud ;= MAXTEILNEHMER
+    end;
+    writeln('Geben sie Matrikelnummer und Aktivität ein:');
+    for i := 1 to AnzStud do
+    begin
+      write('Matr.Nr.');
+      readln('MatrNrFeld[i]);
+      write('a-aktiv', 'p-passiv:'):
+      readln(Status);
+      if Status = 'a' then 
+        StatusFeld[i] := aktiv
+      else
+        StatusFeld[i] := passiv
+    end;
+    
+    for i := 1 to AnzStud do
+    begin
+      if Statusfeld[i] = aktiv then
+      begin
+        writeln('Der Student mit Matrikelnummer', MatrFeldNr[i], 'hat mit Erfolg teilgenommen.')
+      end;
+    end;
+  
+  writeln('Liste aller aktiven Seminar-Teilnehmer');
+  for i := 1 to AnzStud do
+    if Statusfeld[i] = aktiv then
+      writeln(MatrNrFeld[i])
+      
+  writeln('Liste aller passiven Seminar-Teilnehmer');
+  for i := 1 to AnzStud do
+    if Statusfeld[i] = passiv then
+      writeln(MatrNrFeld[i])
+      
+end.
+    
+ 
   
