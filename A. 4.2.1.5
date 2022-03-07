@@ -1,0 +1,15 @@
+program Seminar (input, output); 
+
+{Es geht um ein Seminar mit 12 Studenten, deren Teilnahmestatus aktiv oder passiv sein kann. Gesucht ist ein Programm,
+das die Art der Teilnahme (aktiv oder passiv) jedes Studenten einliest, die Matrikelnummer der aktiven Studenten ausdruckt
+und eine Liste der aktiven und passiven Studenten erstellt. Teilnahmestatus werden in char Format als 'a' und 'p' eingelesen.}
+
+  type
+  tStatus = (aktiv, passiv);
+  tIndex = 1..12;
+  tTeilnahmeArt = array [tIndex] of tStatus;
+  
+  var
+  StudTeilnahme : tTeilnahmeArt
+  i : tIndex
+  
