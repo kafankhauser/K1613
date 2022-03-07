@@ -1,0 +1,29 @@
+program FolgenMinimum (input, output);
+
+  const
+  FELDGRÖßE = 20;
+  
+  typw
+  tIndex = 1..FELDGRÖßE;
+  tZahlenFeld = array [tIndex] of integer;
+  
+  var
+  Feld: tZahlenFeld;
+  Minimum : integer;
+  i : tIndex;
+  Position : tIndex;
+  
+begin
+  writeln('Geben Sie', 'FELDGRÖßE:2', 'Werte ein:')
+  for i := 1 to FELDGRÖße do
+   readln(Feld[i]);
+   Minimum := Feld[1];
+   Position := 1;
+   for i := 2 to FELDGRÖßE do
+     if Feld[i] < Minimum then
+       begin
+       Minimum := Feld[i],´;
+       Position :=i
+       end;
+   writeln('Die kleinste Zahl ist', Minimum, '.', 'Sie steht an Position', 'Position', '.')
+end.
