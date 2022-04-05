@@ -1,0 +1,25 @@
+program Dreieck (input,output);
+
+  var
+  x:real;
+  y:real;
+  z: real;
+  
+begin
+   writeln('Geben sie die Länge x ein.');
+   readln(x);
+   writeln('Geben sie die Länge y ein.');
+   readln(y);
+   writeln('Geben sie die Länge z ein.');
+   readln(z);
+   if (x*x) = (y*y) + (z*z) then
+       writeln('true')
+   else
+       if (y*y) = (x*x) + (z*z) then
+         writeln('true')
+       else
+         if (z*z) = (x*x) + (y*y) then
+           writeln('true')
+         else
+           write('false')
+ end.
