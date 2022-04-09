@@ -1,12 +1,12 @@
-program Maximum (input, output);
+program groessteZahl (input, output);
 {gibt die größte Zahl der integer-Eingabezahlen, 0 beendet die Eingabe}
 
   var
-  Zahl: integer,
+  Zahl,
   Maximum: integer;
   
 begin
-  writeln('Geben sie die interger-Zahlen ein.', '0 beendet die Eingabe.');
+  writeln('Geben sie die Zahlen ein.', '0 beendet die Eingabe.');
   readln(Zahl);
   Maximum := Zahl;
   if Zahl <> 0 then
@@ -20,6 +20,4 @@ begin
   else
     writeln('Leere Eingabefolge.')
 end.
-
-
 
