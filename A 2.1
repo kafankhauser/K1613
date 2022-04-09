@@ -2,13 +2,28 @@ program Quersumme (input, output);
 {alternierende Quersumme = Differenz zwischen der Summe der geraden Zahlen und Summe der ungeraden Zahlen}
 
   var
-  x: integer,
-  Y: string;
-  
+  x1: integer;
+  x2: integer;
+  x3: integer;
+  x4: integer;
+  x5: integer;
+  x6: integer;
+
 begin
-  writeln('Geben sie die Zahlen ein.');
-  readln(x);
-  Y := inttostring(x);
-  writeln(Y);
-  
+  writeln('Geben sie die erste Ziffer der Zahl ein.');
+  readln(x1);
+  writeln('Geben sie die zweite Ziffer der Zahl ein.');
+  readln(x2);
+  writeln('Geben sie die dritte Ziffer der Zahl ein.');
+  readln(x3);
+  writeln('Geben sie die vierte Ziffer der Zahl ein.');
+  readln(x4);
+  writeln('Geben sie die fünfte Ziffer der Zahl ein.');
+  readln(x5);
+  writeln('Geben sie die sechste Ziffer der Zahl ein.');
+  readln(x6);
+    if (x1 + x3 + x5) - (x2 + x4 + x6) = 0 then
+       writeln('true')
+    else
+       writeln('false');
 end.
