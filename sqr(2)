@@ -1,0 +1,17 @@
+program Wurzel (input, output);
+
+var
+a,b,c,n,i : integer;
+
+begin
+ readln(n);
+ a := 1;
+ b := 1;
+ writeln(a/b);
+ for i := 2 to n do
+ c := a;
+ a := a + b;
+ b := c + a;
+ writeln(a/b)
+end.
+
